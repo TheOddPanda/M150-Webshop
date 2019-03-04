@@ -1,6 +1,7 @@
 package ch.bbw.WebshopSpringReact.controller;
 
 import ch.bbw.WebshopSpringReact.model.Product;
+import ch.bbw.WebshopSpringReact.service.ProductService;
 import com.sun.istack.internal.NotNull;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

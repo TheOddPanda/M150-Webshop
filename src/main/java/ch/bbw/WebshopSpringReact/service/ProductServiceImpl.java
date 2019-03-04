@@ -1,13 +1,20 @@
 package ch.bbw.WebshopSpringReact.service;
 
+import ch.bbw.WebshopSpringReact.exception.ResourceNotFoundException;
 import ch.bbw.WebshopSpringReact.model.Product;
+import ch.bbw.WebshopSpringReact.repository.ProductRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
 public class ProductServiceImpl implements ProductService {
 
-    // productRepository constructor injection
+    private ProductRepository productRepository;
+
+    public ProductServiceImpl(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     @Override
     public Iterable<Product> getAllProducts() {

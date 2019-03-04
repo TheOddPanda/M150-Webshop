@@ -1,17 +1,26 @@
 package ch.bbw.WebshopSpringReact.controller;
 
 
+import ch.bbw.WebshopSpringReact.dto.OrderProductDto;
+import ch.bbw.WebshopSpringReact.exception.ResourceNotFoundException;
 import ch.bbw.WebshopSpringReact.model.Order;
 import ch.bbw.WebshopSpringReact.model.OrderProduct;
+import ch.bbw.WebshopSpringReact.model.OrderStatus;
+import ch.bbw.WebshopSpringReact.service.OrderProductService;
+import ch.bbw.WebshopSpringReact.service.OrderService;
+import ch.bbw.WebshopSpringReact.service.ProductService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/orders")
