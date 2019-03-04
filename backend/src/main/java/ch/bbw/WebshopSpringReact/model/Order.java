@@ -2,9 +2,7 @@ package ch.bbw.WebshopSpringReact.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import javax.validation.Valid;
