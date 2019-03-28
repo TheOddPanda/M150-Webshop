@@ -17,13 +17,17 @@ public class WebshopSpringReactApplication {
 	@Bean
 	CommandLineRunner runner(ProductService productService) {
 		return args -> {
-			productService.save(new Product(1L, "TV Set", 300.00, "http://placehold.it/200x100"));
-			productService.save(new Product(2L, "Game Console", 200.00, "http://placehold.it/200x100"));
-			productService.save(new Product(3L, "Sofa", 100.00, "http://placehold.it/200x100"));
-			productService.save(new Product(4L, "Icecream", 5.00, "http://placehold.it/200x100"));
-			productService.save(new Product(5L, "Beer", 3.00, "http://placehold.it/200x100"));
-			productService.save(new Product(6L, "Phone", 500.00, "http://placehold.it/200x100"));
-			productService.save(new Product(7L, "Watch", 30.00, "http://placehold.it/200x100"));
+			initProducts(productService);
 		};
+	}
+
+	private void initProducts(ProductService productService) {
+		productService.save(new Product(1L, "Gameboy Advance", 300.00, "http://placehold.it/200x100"));
+		productService.save(new Product(2L, "PS4", 200.00, "http://placehold.it/200x100"));
+		productService.save(new Product(3L, "PS3", 100.00, "http://placehold.it/200x100"));
+		productService.save(new Product(4L, "PS2", 100.00, "http://placehold.it/200x100"));
+		productService.save(new Product(5L, "PS1", 100.00, "http://placehold.it/200x100"));
+		productService.save(new Product(6L, "Gameboy Color", 50.0, "http://placehold.it/200x100"));
+		productService.save(new Product(7L, "NES", 500.00, "http://placehold.it/200x100"));
 	}
 }

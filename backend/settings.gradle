@@ -3,4 +3,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'Webshop-Spring-React'
+rootProject.name = 'webshop-M15'

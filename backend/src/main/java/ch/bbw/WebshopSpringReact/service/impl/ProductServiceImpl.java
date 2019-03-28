@@ -1,10 +1,12 @@
-package ch.bbw.WebshopSpringReact.service;
+package ch.bbw.WebshopSpringReact.service.impl;
 
 import ch.bbw.WebshopSpringReact.exception.ResourceNotFoundException;
 import ch.bbw.WebshopSpringReact.model.Product;
 import ch.bbw.WebshopSpringReact.repository.ProductRepository;
+import ch.bbw.WebshopSpringReact.service.ProductService;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
+import javax.transaction.Transactional;
 
 @Service
 @Transactional

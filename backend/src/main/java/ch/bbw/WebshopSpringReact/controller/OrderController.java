@@ -73,8 +73,7 @@ public class OrderController {
     }
 
     private void validateProductsExistence(List<OrderProductDto> orderProducts) {
-        List<OrderProductDto> list = orderProducts
-                .stream()
+        List<OrderProductDto> list = orderProducts.stream()
                 .filter(op -> Objects.isNull(productService.getProduct(op
                         .getProduct()
                         .getId())))

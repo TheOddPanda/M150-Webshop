@@ -1,7 +1,8 @@
-package ch.bbw.WebshopSpringReact.service;
+package ch.bbw.WebshopSpringReact.service.impl;
 
 import ch.bbw.WebshopSpringReact.model.Order;
 import ch.bbw.WebshopSpringReact.repository.OrderRepository;
+import ch.bbw.WebshopSpringReact.service.OrderService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,7 +1,5 @@
 package ch.bbw.WebshopSpringReact.model;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
